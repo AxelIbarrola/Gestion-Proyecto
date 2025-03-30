@@ -1,0 +1,20 @@
+{
+  "name": "gestion-proyecto",
+  "version": "1.0.0",
+  "description": "Proyecto para obtener el tiempo total que tomaria realizar un proyecto en base al tiempo individual de las tareas que lo componen y en base al resultado definir la cotización del mismo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxelIbarrola/Gestion-Proyecto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AxelIbarrola/Gestion-Proyecto/issues"
+  },
+  "homepage": "https://github.com/AxelIbarrola/Gestion-Proyecto#readme"
+}
