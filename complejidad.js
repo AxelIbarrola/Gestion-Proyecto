@@ -24,8 +24,12 @@ class Media extends Complejidad {
 }
 
 class Maxima extends Complejidad {
-    obtenerCostoExtra(duracion) {
-        return duracion <= 10 ? 0.07 : 0.07 + (1000 * (duracion - 10))
+
+    calcularCosto(duracion, costoFijo){
+        const costoExtra = 0.07
+        const costoSinExtra = duracion * costoFijo
+
+        return duracion <= 10 ? costoSinExtra * (1 + costoExtra) : (costoSinExtra * (1 + costoExtra)) + 1000 * (duracion - 10)
     }
 }
 
