@@ -1,5 +1,6 @@
 const { Tarea, TareaCompuesta } = require("./tarea")
 const Proyecto = require("./proyecto")
+const config = require("./configuracion_costos")
 
 const proyecto = new Proyecto()
 
@@ -20,3 +21,5 @@ tarea4.agregarTarea(tarea5)
 proyecto.agregarTarea(tarea4)
 
 proyecto.mostrarTareas()
+
+console.log(config.obtenerCostoFijo())
