@@ -29,3 +29,8 @@ class Maxima extends Complejidad {
     }
 }
 
+const minima = new Minima();
+const media = new Media();
+const maxima = new Maxima();
+
+module.exports = { minima, media, maxima }

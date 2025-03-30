@@ -21,4 +21,4 @@ const instanciaConfiguracion = new Configuracion()
 
 Object.freeze(instanciaConfiguracion)
 
-module.exports = instanciaConfiguracion;
+module.exports = instanciaConfiguracion

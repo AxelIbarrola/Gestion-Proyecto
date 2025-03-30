@@ -1,15 +1,16 @@
 const { Tarea, TareaCompuesta } = require("./tarea")
 const Proyecto = require("./proyecto")
 const config = require("./configuracion_costos")
+const { minima, media, maxima } = require("./complejidad")
 
 const proyecto = new Proyecto()
 
-const tarea1 = new Tarea("1", 1)
-const tarea2 = new Tarea("2", 2)
-const tarea3 = new Tarea("3", 3)
+const tarea1 = new Tarea("1", 1, minima)
+const tarea2 = new Tarea("2", 2, media)
+const tarea3 = new Tarea("3", 3, maxima)
 
-const tarea4 = new TareaCompuesta("4", 4, [tarea1, tarea3])
-const tarea5 = new TareaCompuesta("5", 5 , [tarea2])
+const tarea4 = new TareaCompuesta("4", 4, [tarea1, tarea3], media)
+const tarea5 = new TareaCompuesta("5", 5 , [tarea2], maxima)
 
 tarea4.agregarTarea(tarea5)
 
