@@ -18,7 +18,7 @@ class Tarea{
         console.log(`Código: ${this.codigo} - Duración: ${this.duracion}`)
     }
 
-    obtetenerCosto(){
+    obtenerCosto(){
         return this.complejidad.calcularCosto(this.duracion, config.costoFijo)
     }
 
@@ -30,6 +30,7 @@ class TareaCompuesta{
         this.duracion = duracion;
         this.tareas = tareas;
         this.complejidad = complejidad
+        this.costo = this.complejidad.calcularCosto(this.duracion, config.costoFijo)
     }
 
     agregarTarea(...tareas){
@@ -57,7 +58,7 @@ class TareaCompuesta{
         return this.tareas.reduce(
             (acumulador, tarea) => acumulador + tarea.obtenerCosto()
             ,
-            this.obtenerCosto()
+            this.costo
         )
     }
 

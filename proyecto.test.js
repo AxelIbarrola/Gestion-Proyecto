@@ -24,4 +24,4 @@ proyecto.agregarTarea(tarea4)
 proyecto.mostrarTareas()
 
 // console.log(config.obtenerCostoFijo())
-console.log(tarea3.obtetenerCosto())
+console.log(tarea4.obtenerCosto())
