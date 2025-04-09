@@ -53,7 +53,7 @@ class Maxima extends Complejidad {
     }
 
     anterior() {
-        new Media()
+        return new Media()
     }
 }
 

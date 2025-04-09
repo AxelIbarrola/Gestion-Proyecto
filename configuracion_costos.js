@@ -2,7 +2,7 @@
 class Configuracion {
     constructor() {
         if (!Configuracion.instancia) { // comprueba que no exista una instancia de la configuración ya creada
-            this.costoFijo = 10;
+            this.costoFijo = 1000;
             Configuracion.instancia = this // asignamos la propiedad instancia
         }
         return Configuracion.instancia
