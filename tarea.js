@@ -22,6 +22,7 @@ class Tarea{
         return this.complejidad.calcularCosto(this.duracion, config.costoFijo)
     }
 
+
 }
 
 class TareaCompuesta{
@@ -35,6 +36,14 @@ class TareaCompuesta{
 
     agregarTarea(...tareas){
         this.tareas.push(...tareas)
+    }
+
+    overhead() {
+        if (this.tareas.length > 3) {
+            return 0.04
+        }
+
+        return 0
     }
 
     obtenerDuracion(){
@@ -55,11 +64,15 @@ class TareaCompuesta{
     }
 
     obtenerCosto(){
-        return this.tareas.reduce(
+        const costo =  this.tareas.reduce(
             (acumulador, tarea) => acumulador + tarea.obtenerCosto()
             ,
             this.costo
         )
+
+        const overhead = this.overhead()
+
+        return costo * (1 + overhead)
     }
 
 }

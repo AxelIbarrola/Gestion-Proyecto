@@ -15,6 +15,15 @@ class Proyecto{
         )
     }
 
+    obtenerCosto(){
+        return this.tareas.reduce(
+            (acumulador, tarea) => acumulador + tarea.obtenerCosto()
+            ,
+            0
+        )
+    }
+
+
     mostrarTareas(){
             this.tareas.forEach(
             (tarea) => tarea.mostrarTareas()
