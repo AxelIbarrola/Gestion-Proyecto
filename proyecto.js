@@ -36,4 +36,6 @@ class Proyecto{
     }
 }
 
-module.exports = Proyecto
+const proyecto = new Proyecto()
+
+module.exports = proyecto

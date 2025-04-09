@@ -22,6 +22,13 @@ class Tarea{
         return this.complejidad.calcularCosto(this.duracion, config.costoFijo)
     }
 
+    cambiarComplejidadSiguiente() {
+        return this.complejidad = this.complejidad.siguiente()
+    }
+
+    cambiarComplejidadAnterior(){
+        return this.complejidad = this.complejidad.anterior()
+    }
 
 }
 
@@ -39,11 +46,8 @@ class TareaCompuesta{
     }
 
     overhead() {
-        if (this.tareas.length > 3) {
-            return 0.04
-        }
-
-        return 0
+        return  (this.tareas.length > 3) ? 0.04 : 0
+        
     }
 
     obtenerDuracion(){
@@ -74,7 +78,6 @@ class TareaCompuesta{
 
         return costo * (1 + overhead)
     }
-
 }
 
 module.exports = { Tarea, TareaCompuesta }
